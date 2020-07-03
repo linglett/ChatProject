@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="server.java.com.linglett.mapper.UserMapper">
+    <select id="selectUser" resultType="server.java.com.linglett.pojo.User">
+        select * from chat_project.user_list where account=#{account} and password=#{password};
+    </select>
+    <select id="selectUserAccount" resultType="server.java.com.linglett.pojo.User">
+        select * from chat_project.user_list where account=#{account};
+    </select>
+
+    <insert id="addUser">
+        insert into chat_project.user_list (account, password, username, sex, birthday, head_portrait) values (#{account},#{password},#{username},#{sex},#{birthday},#{head_portrait})
+    </insert>
+</mapper>

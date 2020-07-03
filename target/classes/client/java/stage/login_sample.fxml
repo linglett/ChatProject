@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.java.controller.ControllerLogin">
+   <children>
+      <VBox layoutX="453.0" layoutY="1.0" prefHeight="507.0" prefWidth="300.0" style="-fx-background-color: #61bdb5; -fx-border-image-repeat: #2E323B;">
+         <children>
+            <Label prefHeight="147.0" prefWidth="298.0" text="      Welcome！" textAlignment="CENTER" textFill="#db9019">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="51.0" layoutY="100.0" prefHeight="35.0" prefWidth="115.0" text="User Login">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <HBox fx:id="accountHbox" layoutX="51.0" layoutY="147.0" prefHeight="37.0" prefWidth="342.0" style="-fx-border-color: #BEBFC1; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+         <children>
+            <TextField onMouseClicked="#recoverTextField" fx:id="account" prefHeight="40.0" prefWidth="340.0" promptText="Account Number" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox fx:id="passwordHbox" layoutX="51.0" layoutY="193.0" prefHeight="37.0" prefWidth="342.0" style="-fx-border-color: #BEBFC1; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+         <children>
+            <PasswordField onMouseClicked="#recoverTextField" fx:id="password" prefHeight="37.0" prefWidth="340.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: f0f0f0;" />
+         </children>
+      </HBox>
+      <Button fx:id="btlogin" layoutX="51.0" layoutY="254.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="45.0" prefWidth="115.0" text="LOGIN">
+         <font>
+            <Font name="Microsoft Tai Le" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutY="427.0" prefHeight="80.0" prefWidth="452.0" style="-fx-background-color: #F3F4F6;">
+         <children>
+            <Button fx:id="register" layoutX="14.0" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #F3F4F6;" text="REGISTER" underline="true">
+               <font>
+                  <Font name="Microsoft Tai Le" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="loginDefeatedLabel" layoutX="237.0" layoutY="111.0" prefHeight="17.0" prefWidth="151.0" text="您的帐号或者密码错误" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

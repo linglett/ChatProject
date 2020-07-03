@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.java.controller.ControllerRegisterSucceed">
+    <children>
+        <Label layoutX="251.0" layoutY="101.0" prefHeight="76.0" prefWidth="238.0" text="    注册成功" textAlignment="JUSTIFY" textFill="#49f243">
+            <font>
+                <Font name="Malgun Gothic Semilight" size="39.0" />
+            </font>
+        </Label>
+        <Label layoutX="102.0" layoutY="230.0" prefHeight="76.0" prefWidth="201.0" text="  您的账号是:" textAlignment="JUSTIFY" textFill="#49f243">
+            <font>
+                <Font name="Malgun Gothic Semilight" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="successButton" onAction="#change" layoutX="303.0" layoutY="247.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="334.0" text="点击获取账号" />
+    </children>
+</AnchorPane>

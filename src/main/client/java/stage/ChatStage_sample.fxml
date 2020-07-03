@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="874.0" prefWidth="1281.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.java.controller.ControllerChatCopy">
+    <children>
+        <VBox fx:id="page_buildgroup" layoutX="493.0" prefHeight="893.0" prefWidth="849.0" visible="false">
+            <children>
+                <Button mnemonicParsing="false"  prefHeight="56.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" text="返回">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets left="1.0" />
+                    </VBox.margin>
+                </Button>
+                <HBox prefHeight="72.0" prefWidth="857.0">
+                    <children>
+                        <TextField fx:id="textfield_buildgroup" prefHeight="43.0" prefWidth="467.0" promptText="为群聊起一个名字吧">
+                            <HBox.margin>
+                                <Insets left="25.0" top="13.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="button_groupbuild" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="创建" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="20.0" top="15.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="notfindaddfriend1" prefHeight="72.0" prefWidth="242.0" text="没有找到符合条件的用户" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="25.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addfriend1" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addfriend1" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addfriend1" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="button_addfriendpage1" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="label_addfriend_error1" prefHeight="72.0" prefWidth="242.0" text="你们已经是好友" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addgroup1" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addgroup1" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addgroup1" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="button_addgrouppage1" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="label_addgroup_error1" prefHeight="72.0" prefWidth="242.0" text="你已经加入改群聊" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="874.0" prefWidth="58.0" style="-fx-background-color: #28ccc6;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="button_userdata" mnemonicParsing="false" onAction="#buttonUserdataAction" prefHeight="60.0" prefWidth="59.0" style="-fx-background-color: #28ccc6;">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fx:id="headChat" fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" />
+                    </graphic>
+                </Button>
+                <Button fx:id="button_massage" mnemonicParsing="false" onAction="#buttonMassageAction" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="45.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/消息 (3).png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/联系人-未选中 (1).png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="button_addfriend" mnemonicParsing="false" onAction="#buttonAddFriendAction" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/add.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#friendlist_flush" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/refresh.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#buttonGroupAddAction" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/创建群聊.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #28ccc6;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/注销.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+        <ListView fx:id="friendList" layoutX="59.0" layoutY="81.0" prefHeight="793.0" prefWidth="389.0" style="-fx-border-color: #e6e5e5;" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="848.0" AnchorPane.topAnchor="81.0" />
+        <HBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="73.0" prefWidth="406.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="801.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="374.0" promptText="搜索" style="-fx-background-color: #f0f0f0;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="13.0" top="4.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <VBox fx:id="page_blank" alignment="CENTER" layoutX="481.0" prefHeight="874.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="109.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                    <image>
+                        <Image url="@../image/消息 (4).png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="25.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label alignment="BASELINE_CENTER" prefHeight="41.0" prefWidth="208.0" text="找个人来聊天吧" textFill="#d0d0d0">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox fx:id="page_chat" alignment="TOP_RIGHT" layoutX="481.0" prefHeight="883.0" prefWidth="848.0" style="-fx-background-color: #f5f0f0;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="61.0" style="-fx-background-color: #f5f0f0 #f5f0f0;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fx:id="upper_right" fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/联系人.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ListView fx:id="msgList" prefHeight="637.0" prefWidth="848.0" style="-fx-background-color: #f5f0f0;" />
+                <HBox prefHeight="16.0" prefWidth="848.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #f5f0f0;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ChatMeunImage/表情.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="31.0" style="-fx-background-color: #f5f0f0;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ChatMeunImage/图片.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #f5f0f0;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ChatMeunImage/文件.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="56.0" style="-fx-background-color: #f5f0f0;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ChatMeunImage/语音.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <VBox alignment="BOTTOM_RIGHT" prefHeight="198.0" prefWidth="825.0" style="-fx-background-color: #ffffff; -fx-border-color: #f0f0f0;">
+                    <children>
+                        <TextArea fx:id="msg" prefHeight="221.0" prefWidth="846.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #f0f0f0;">
+                            <font>
+                                <Font size="18.0" />
+                            </font></TextArea>
+                        <HBox alignment="TOP_RIGHT" prefHeight="76.0" prefWidth="846.0">
+                            <children>
+                                <MenuButton alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="192.0" style="-fx-background-color: #28ccc6;" text="常用语">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="大家好" />
+                                        <MenuItem mnemonicParsing="false" text="什么？" />
+                                        <MenuItem mnemonicParsing="false"  text="？？？？" />
+                                        <MenuItem mnemonicParsing="false" text="......" />
+                                    </items>
+                                </MenuButton>
+                                <Button fx:id="send" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #28ccc6;" text="发送" textFill="WHITE" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox fx:id="page_userdata" alignment="TOP_CENTER" layoutX="481.0" prefHeight="893.0" prefWidth="849.0" style="-fx-background-color: #28ccc6;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="button_userdata_back" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-color: #28ccc6;" text="返回" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets right="760.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" style="-fx-background-color: #28ccc6;">
+                    <graphic>
+                        <ImageView fx:id="userdata_head" fitHeight="118.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../ChatInterface/src/image/联系人_个人中心.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets top="65.0" />
+                    </VBox.margin>
+                </Button>
+                <Label fx:id="userdata_nickname" alignment="CENTER" prefHeight="33.0" prefWidth="104.0" text="杰哥" textFill="#fffafa">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userdata_account" alignment="CENTER" prefHeight="24.0" prefWidth="137.0" text="1111111111" textFill="#f0f0f0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="button_userdata_editor" mnemonicParsing="false" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #28ccc6;" text="编 辑 资 料" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="25.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fx:id="button_editor_image" fitHeight="47.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:///C:/Users/12508/IdeaProjects/ChatProject/src/main/client/java/image/修改.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="button_userdata_password" mnemonicParsing="false" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #28ccc6;" text="修 改 密 码" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fx:id="button_editor_image1" fitHeight="47.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:///C:/Users/12508/IdeaProjects/ChatProject/src/main/client/java/image/修改密码.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <VBox fx:id="page_userdataedition" layoutX="481.0" prefHeight="883.0" prefWidth="849.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" text="返回">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="1.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <HBox prefHeight="72.0" prefWidth="824.0">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="43.0" text="昵称">
+                            <HBox.margin>
+                                <Insets left="30.0" top="13.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="textfield_userdataeditornickname" prefHeight="43.0" prefWidth="467.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="13.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="72.0" prefWidth="824.0">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="43.0" text="性别">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="30.0" top="13.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textfield_userdataeditorsex" prefHeight="44.0" prefWidth="467.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="13.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="72.0" prefWidth="824.0">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="43.0" text="生日">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="30.0" top="13.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textfield_userdataeditorbirthday" prefHeight="44.0" prefWidth="467.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="13.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="72.0" prefWidth="727.0">
+                    <children>
+                        <Button fx:id="button_userdataeditor" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #28ccc6;" text="保存">
+                            <HBox.margin>
+                                <Insets left="400.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-border-color: #28ccc6; -fx-background-color: #ffffff;" text="取消">
+                            <HBox.margin>
+                                <Insets left="11.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox fx:id="page_addfriend" layoutX="480.0" prefHeight="893.0" prefWidth="849.0" visible="false">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" text="返回">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets left="1.0" />
+                    </VBox.margin>
+                </Button>
+                <HBox prefHeight="72.0" prefWidth="857.0">
+                    <children>
+                        <TextField fx:id="textfield_addfriend"  prefHeight="43.0" prefWidth="467.0" promptText="添加好友，群聊/请输入QQ号码或群号">
+                            <HBox.margin>
+                                <Insets left="10.0" top="13.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="查找" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="20.0" top="15.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="notfindaddfriend" prefHeight="72.0" prefWidth="242.0" text="没有找到符合条件的用户" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addfriend" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addfriend" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addfriend" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="button_addfriendpage" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="label_addfriend_error" prefHeight="72.0" prefWidth="242.0" text="你们已经是好友" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addgroup" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addgroup" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addgroup" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="button_addgrouppage" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="label_addgroup_error" prefHeight="72.0" prefWidth="242.0" text="你已经加入改群聊" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <GridPane fx:id="Emoji" layoutX="401.0" layoutY="533.0" prefHeight="135.0" prefWidth="183.0" style="-fx-border-color: #f0f0f0; -fx-background-color: #ffffff;" visible="false">
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints maxWidth="48.0" minWidth="47.0" prefWidth="48.0" />
+                <ColumnConstraints maxWidth="45.0" minWidth="44.0" prefWidth="44.0" />
+                <ColumnConstraints />
+                <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            </columnConstraints>
+            <children>
+                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="😈" textFill="#f808a4" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="🙏" textFill="#dabc11" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="👎" textFill="#f5d105" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="💗" textFill="#f80606" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="🙉" textFill="#ee7942" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="💣" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="😍" textFill="#f25553" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="😱" textFill="#f25553" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="😂" textFill="#979687">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="☺" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="43.0" prefWidth="44.0" style="-fx-background-color: #f0f0f0;" text="🍈" textFill="#a84747" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false"  prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #f0f0f0;" text="💩" textFill="#d3b82f" GridPane.columnIndex="3">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+        <VBox fx:id="page_groupsetting" layoutX="486.0" prefHeight="893.0" prefWidth="849.0" visible="false">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="171.0" style="-fx-background-color: #ffffff;" text="聊天设置">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets left="1.0" />
+                    </VBox.margin>
+                </Button>
+                <HBox prefHeight="79.0" prefWidth="849.0">
+                    <children>
+                        <ImageView fx:id="group_head" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <VBox prefHeight="90.0" prefWidth="859.0">
+                            <children>
+                                <Label fx:id="chat_setting_name" prefHeight="34.0" prefWidth="111.0" text="群名称">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="chat_setting_account" text="群账号" textFill="#bfbdbd">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: f0f0f0;">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: ffffff;" text="群成员">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <HBox prefHeight="51.0" prefWidth="847.0">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="72.0" prefWidth="108.0" style="-fx-background-color: ffffff;">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="60.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../image/加好友.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Button fx:id="page_groupsetting_myname" alignment="TOP_LEFT" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="81.0" prefWidth="257.0" style="-fx-background-color: ffffff;" text="    用户名称">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="851.0" style="-fx-background-color: ffffff; -fx-border-color: f0f0f0;" text="    退出群聊">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addfriend11" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addfriend11" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addfriend11" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="button_addfriendpage11" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="label_addfriend_error11" prefHeight="72.0" prefWidth="242.0" text="你们已经是好友" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox fx:id="page_add_hbox_addgroup11" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="849.0" visible="false">
+                    <children>
+                        <ImageView fx:id="image_addgroup11" fitHeight="84.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="label_addgroup11" prefHeight="35.0" prefWidth="208.0" text="Label">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="button_addgrouppage11" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #28ccc6;" text="添加" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="170.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="label_addgroup_error11" prefHeight="72.0" prefWidth="242.0" text="你已经加入改群聊" textFill="#abaaaa" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <AnchorPane fx:id="Pane_selectfriend" layoutX="445.0" layoutY="79.0" prefHeight="650.0" prefWidth="453.0" style="-fx-border-color: f0f0f0;" visible="false">
+            <children>
+                <ListView fx:id="selectfriend_list" layoutY="63.0" prefHeight="586.0" prefWidth="453.0" style="-fx-background-color: f0f0f0;" />
+                <HBox layoutX="-1.0" layoutY="-4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="453.0" style="-fx-background-color: f0f0f0;">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="113.0" style="-fx-background-color: f0f0f0;" text="返回">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/back.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="Pane_selectfriend1" layoutX="455.0" layoutY="89.0" prefHeight="650.0" prefWidth="453.0" style="-fx-border-color: f0f0f0;" visible="false">
+            <children>
+                <ListView fx:id="selectfriend_list1" layoutY="63.0" prefHeight="586.0" prefWidth="453.0" style="-fx-background-color: f0f0f0;" />
+                <HBox layoutX="-1.0" layoutY="-4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="453.0" style="-fx-background-color: f0f0f0;">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="113.0" style="-fx-background-color: f0f0f0;" text="返回">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/back.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="change_password" layoutX="686.0" layoutY="94.0" prefHeight="639.0" prefWidth="467.0" visible="false">
+            <children>
+                <HBox layoutY="-7.0" prefHeight="81.0" prefWidth="467.0" style="-fx-background-color: ffffff;">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="113.0" style="-fx-background-color: f0f0f0;" text="返回">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/back.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <VBox layoutY="64.0" prefHeight="575.0" prefWidth="467.0" style="-fx-background-color: ffffff;">
+                    <children>
+                        <Label prefHeight="62.0" prefWidth="483.0" text="请输入新密码">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="newpassword" prefHeight="41.0" prefWidth="347.0">
+                            <VBox.margin>
+                                <Insets left="20.0" right="100.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="确认">
+                            <VBox.margin>
+                                <Insets left="290.0" top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

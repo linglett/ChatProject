@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2afdee85-750f-4dbb-9fdb-1c11960d3746" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="XML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/donw/Java/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dnt3mgMIuqgeypi6MNBoLyjdYK" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\server\java\com\linglett\image" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\client\java\stage" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\client\java" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\Server" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\test" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\client\java" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\client\java\stage" />
+      <recent name="C:\Users\12508\IdeaProjects\ChatProject\src\main\Client\Fxml" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.linglett.pojo" />
+      <recent name="pojo" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pojo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.LoginStage (1)">
+    <configuration name="LoginStage (1)" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.java.stage.LoginStage" />
+      <module name="ChatProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.java.stage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.java.stage.RegisterStage" />
+      <module name="ChatProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.java.stage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterSucceedStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.java.stage.RegisterSucceedStage" />
+      <module name="ChatProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.java.stage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.java.com.linglett.sendandreceive.Server" />
+      <module name="ChatProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.java.com.linglett.sendandreceive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <module name="ChatProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LoginStage (1)" />
+      <item itemvalue="Application.RegisterStage" />
+      <item itemvalue="Application.RegisterSucceedStage" />
+      <item itemvalue="Application.Server (1)" />
+      <item itemvalue="Application.Test1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server (1)" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.RegisterStage" />
+        <item itemvalue="Application.RegisterSucceedStage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2afdee85-750f-4dbb-9fdb-1c11960d3746" name="Default Changelist" comment="" />
+      <created>1593072487093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593072487093</updated>
+      <workItem from="1593072490354" duration="10257000" />
+      <workItem from="1593088997692" duration="9250000" />
+      <workItem from="1593129784953" duration="45586000" />
+      <workItem from="1593493249148" duration="18035000" />
+      <workItem from="1593589416907" duration="6251000" />
+      <workItem from="1593648418475" duration="30920000" />
+      <workItem from="1593697710703" duration="9131000" />
+      <workItem from="1593735170793" duration="682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
